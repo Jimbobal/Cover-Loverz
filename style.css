@@ -1,0 +1,651 @@
+/* ========================================
+   Base Styles
+   ======================================== */
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jost', 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #3a3a3a;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #1e73be;
+    color: #ffffff;
+    border-color: #1e73be;
+}
+
+.btn-primary:hover {
+    background-color: #155a96;
+    border-color: #155a96;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+.btn-secondary {
+    background-color: #222222;
+    color: #ffffff;
+    border-color: #222222;
+    font-size: 12px;
+    padding: 10px 24px;
+}
+
+.btn-secondary:hover {
+    background-color: #1e73be;
+    border-color: #1e73be;
+}
+
+/* ========================================
+   Top Bar
+   ======================================== */
+
+.top-bar {
+    background-color: #636363;
+    padding: 8px 0;
+    font-size: 13px;
+    color: #ffffff;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar-text {
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.top-bar-social a {
+    color: #ffffff;
+    margin-left: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.top-bar-social a:hover {
+    opacity: 1;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.site-header {
+    background-color: #222222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.main-nav a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #1e73be;
+    color: #ffffff;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 56px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-weight: 300;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.hero .btn {
+    margin: 8px;
+}
+
+/* ========================================
+   Promo / Video Section
+   ======================================== */
+
+.promo-video {
+    position: relative;
+    padding: 120px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.promo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.promo-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.promo-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.btn-play {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #1e73be;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 0;
+    border: 3px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-play:hover {
+    background-color: #ffffff;
+    color: #1e73be;
+    transform: scale(1.1);
+}
+
+.btn-play i {
+    margin-left: 3px;
+}
+
+/* ========================================
+   Meet The Band
+   ======================================== */
+
+.meet-the-band {
+    padding: 80px 0;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 42px;
+    margin-bottom: 50px;
+    color: #222222;
+    font-weight: 400;
+}
+
+.band-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.band-member {
+    text-align: center;
+}
+
+.member-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.band-member h3 {
+    font-size: 24px;
+    color: #222222;
+    margin-bottom: 5px;
+}
+
+.band-member p {
+    font-size: 14px;
+    color: #636363;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* ========================================
+   Services / Recommended
+   ======================================== */
+
+.services-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.service-card {
+    background-color: #f9f9f9;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 30px;
+}
+
+.service-info h3 {
+    font-size: 28px;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.service-info p {
+    font-size: 15px;
+    color: #636363;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   Trust / Bark Section
+   ======================================== */
+
+.trust-section {
+    padding: 50px 0;
+    background-color: #efefef;
+    text-align: center;
+}
+
+.bark-badge {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* ========================================
+   Footer
+   ======================================== */
+
+.site-footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 300;
+    color: #cccccc;
+}
+
+.footer-col a {
+    color: #1e73be;
+}
+
+.footer-col a:hover {
+    color: #ffffff;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #636363;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background-color: #1e73be;
+    border-color: #1e73be;
+}
+
+.footer-bottom {
+    border-top: 1px solid #3a3a3a;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #636363;
+    font-weight: 300;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 44px;
+    }
+
+    .band-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar-text {
+        display: none;
+    }
+
+    .top-bar-social {
+        margin: 0 auto;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #222222;
+        padding: 10px 0;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 12px 20px;
+    }
+
+    .hero {
+        min-height: 60vh;
+        background-attachment: scroll;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero .btn {
+        display: block;
+        margin: 10px auto;
+        max-width: 320px;
+    }
+
+    .promo-video {
+        background-attachment: scroll;
+        padding: 80px 0;
+    }
+
+    .promo-content h2 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    .band-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .member-photo {
+        width: 160px;
+        height: 160px;
+    }
+}
